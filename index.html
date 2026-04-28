@@ -8,48 +8,39 @@
 <style>
 body {
   margin:0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Georgia', serif;
   background:#f7f3ee;
-  color:#222;
+  color:#1a1a1a;
 }
 
 .container {
   max-width:1100px;
   margin:auto;
-  padding:40px 20px;
+  padding:60px 20px;
 }
 
-.hero {
+header {
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  flex-wrap:wrap;
+  align-items:center;
+  padding:20px;
 }
 
-.hero-text {
-  max-width:500px;
+.logo {
+  font-size:20px;
+  letter-spacing:2px;
 }
 
-h1 {
-  font-size:48px;
-  line-height:1.2;
-}
-
-.highlight {
-  color:#a67c52;
-}
-
-p {
-  font-size:18px;
-  margin:20px 0;
+.nav a {
+  margin:0 10px;
+  text-decoration:none;
+  color:#555;
 }
 
 .btn {
-  padding:12px 20px;
-  margin-right:10px;
-  text-decoration:none;
+  padding:12px 22px;
   border-radius:4px;
-  display:inline-block;
+  text-decoration:none;
 }
 
 .primary {
@@ -62,22 +53,55 @@ p {
   color:#a67c52;
 }
 
-.hero img {
-  max-width:400px;
-  border-radius:10px;
+.hero {
+  padding:100px 20px;
+}
+
+h1 {
+  font-size:60px;
+  line-height:1.1;
+}
+
+.highlight {
+  color:#a67c52;
+}
+
+.sub {
+  margin-top:20px;
+  font-size:18px;
+  max-width:500px;
+}
+
+.actions {
+  margin-top:30px;
 }
 
 .section {
   text-align:center;
-  margin-top:60px;
+  padding:80px 20px;
+}
+
+.features {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.feature {
+  width:23%;
 }
 
 .footer {
-  background:#222;
+  background:#111;
   color:white;
-  text-align:center;
-  padding:30px;
-  margin-top:60px;
+  padding:60px 20px;
+}
+
+.footer-columns {
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
 }
 </style>
 
@@ -85,33 +109,93 @@ p {
 
 <body>
 
+<header>
+<div class="logo">CALL BELL TO SELL</div>
+<div class="nav">
+<a href="#">Home</a>
+<a href="#">Sell</a>
+<a href="#">Buy</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+</div>
+<a href="#" class="btn primary">Get My Home Value</a>
+</header>
+
 <div class="container hero">
 
-<div class="hero-text">
 <h1>
 Sell Smarter.<br>
 Buy Better.<br>
 <span class="highlight">Call Bell to Sell.</span>
 </h1>
 
-<p>Strategic real estate guidance in Clayton, Johnston County & the Triangle.</p>
+<p class="sub">
+Strategic real estate guidance in Clayton, Johnston County & the Triangle.
+</p>
 
+<div class="actions">
 <a href="#" class="btn primary">Get My Home Value</a>
 <a href="#" class="btn secondary">View Listings</a>
 </div>
 
-<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa" alt="Home">
+</div>
+
+<div class="section">
+
+<h2>Your home deserves more than a sign in the yard.</h2>
+
+<p>
+We combine strategy, preparation, and powerful marketing to help you sell for more and with less stress.
+</p>
+
+<div class="features">
+<div class="feature">
+<h4>Strategic Pricing</h4>
+<p>Position your home to maximize value.</p>
+</div>
+
+<div class="feature">
+<h4>Preparation</h4>
+<p>Make your home show at its best.</p>
+</div>
+
+<div class="feature">
+<h4>Marketing</h4>
+<p>Reach more serious buyers.</p>
+</div>
+
+<div class="feature">
+<h4>Negotiation</h4>
+<p>Protect your bottom line.</p>
+</div>
+</div>
 
 </div>
 
-<div class="container section">
-<h2>Your home deserves more than a sign in the yard</h2>
-<p>We use strategy, preparation, and strong marketing to maximize your home's value.</p>
+<div class="section">
+<h2>Ready to take the next step?</h2>
+<a href="#" class="btn primary">Let's Talk</a>
 </div>
 
 <div class="footer">
-<p>Jessica Bell | Realtor</p>
-<p>Call Bell to Sell</p>
+<div class="footer-columns">
+
+<div>
+<h3>Call Bell to Sell</h3>
+<p>Helping you sell smarter and buy better.</p>
+</div>
+
+<div>
+<h4>Areas</h4>
+<p>Clayton<br>Johnston County<br>Raleigh<br>The Triangle</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>(917) 494-0347<br>ksbinvestmentgroup@gmail.com</p>
+</div>
+
+</div>
 </div>
 
 </body>
