@@ -1,411 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Call Bell to Sell | Jessica Bell Realtor</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --cream:#f7f2eb;
-  --soft:#efe5d8;
-  --ink:#151515;
-  --muted:#666;
-  --gold:#a67c52;
-  --dark:#111;
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  background:var(--cream);
-  color:var(--ink);
-  font-family:Inter, sans-serif;
-}
-a{text-decoration:none;color:inherit}
-header{
-  padding:26px 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid rgba(0,0,0,.06);
-}
-.logo{
-  font-family:"Playfair Display", serif;
-  font-size:24px;
-  letter-spacing:2px;
-  line-height:1;
-}
-.logo span{
-  display:block;
-  font-family:Inter, sans-serif;
-  font-size:11px;
-  letter-spacing:4px;
-  color:var(--gold);
-  margin-top:6px;
-}
-nav a{
-  margin:0 14px;
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  color:#333;
-}
-.btn{
-  display:inline-block;
-  padding:15px 26px;
-  border-radius:2px;
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:1.5px;
-  font-weight:600;
-}
-.btn.gold{
-  background:var(--gold);
-  color:white;
-}
-.btn.outline{
-  border:1px solid var(--gold);
-  color:var(--gold);
-}
-.hero {
-  min-height:78vh;
-  padding:110px 7% 90px;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:50px;
-  align-items:center;
-
-  background:
-    linear-gradient(rgba(247,242,235,0.85), rgba(247,242,235,0.9)),
-    url("https://images.unsplash.com/photo-1560518883-ce09059eeffa");
-
-  background-size:cover;
-  background-position:center;
-}
-.eyebrow{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:13px;
-  font-weight:600;
-}
-h1{
-  font-family:"Playfair Display", serif;
-  font-size:78px;
-  line-height:1.02;
-  margin:18px 0 24px;
-}
-h1 em{
-  color:var(--gold);
-  font-style:italic;
-}
-.hero p{
-  font-size:19px;
-  line-height:1.7;
-  color:#444;
-  max-width:560px;
-}
-.hero-card{
-  background:linear-gradient(135deg,#fff,#eadfce);
-  padding:55px;
-  min-height:430px;
-  border:1px solid rgba(166,124,82,.25);
-  box-shadow:0 30px 80px rgba(0,0,0,.08);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-.hero-card h3{
-  font-family:"Playfair Display", serif;
-  font-size:36px;
-  margin:0 0 18px;
-}
-.hero-actions{
-  margin-top:34px;
-  display:flex;
-  gap:16px;
-  flex-wrap:wrap;
-}
-.trust{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  background:white;
-  border-top:1px solid rgba(0,0,0,.06);
-  border-bottom:1px solid rgba(0,0,0,.06);
-}
-.trust div{
-  padding:34px 28px;
-  border-right:1px solid rgba(0,0,0,.08);
-}
-.trust strong{
-  display:block;
-  font-family:"Playfair Display", serif;
-  font-size:21px;
-  margin-bottom:8px;
-}
-.trust span{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.6;
-}
-section{
-  padding:105px 7%;
-}
-.center{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 60px;
-}
-h2{
-  font-family:"Playfair Display", serif;
-  font-size:48px;
-  line-height:1.15;
-  margin:12px 0 18px;
-}
-.center p,.split p,.value p{
-  color:var(--muted);
-  font-size:17px;
-  line-height:1.8;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:22px;
-}
-.card{
-  background:white;
-  padding:34px;
-  border:1px solid rgba(0,0,0,.06);
-  min-height:230px;
-}
-.card .num{
-  color:var(--gold);
-  font-size:13px;
-  letter-spacing:2px;
-  margin-bottom:28px;
-}
-.card h3{
-  font-family:"Playfair Display", serif;
-  font-size:26px;
-  margin:0 0 12px;
-}
-.card p{
-  color:var(--muted);
-  line-height:1.7;
-}
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-  background:var(--soft);
-}
-.quote{
-  font-family:"Playfair Display", serif;
-  font-size:34px;
-  line-height:1.35;
-}
-.list{
-  margin-top:28px;
-}
-.list div{
-  padding:17px 0;
-  border-bottom:1px solid rgba(0,0,0,.12);
-  color:#333;
-}
-.value{
-  background:#151515;
-  color:white;
-  text-align:center;
-}
-.value p{color:#d8d8d8;max-width:680px;margin:0 auto 30px}
-.value h2{color:white}
-.form{
-  max-width:850px;
-  margin:40px auto 0;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-}
-input{
-  padding:17px;
-  border:1px solid rgba(255,255,255,.25);
-  background:rgba(255,255,255,.08);
-  color:white;
-  font-size:15px;
-}
-input::placeholder{color:#ddd}
-.form .btn{
-  grid-column:1/-1;
-  text-align:center;
-  margin-top:8px;
-}
-footer{
-  background:#0b0b0b;
-  color:white;
-  padding:70px 7% 35px;
-}
-.footer-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1.4fr;
-  gap:40px;
-}
-footer h4{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:13px;
-}
-footer p,footer a{
-  color:#d0d0d0;
-  line-height:1.8;
-  font-size:14px;
-}
-.copy{
-  margin-top:50px;
-  padding-top:25px;
-  border-top:1px solid rgba(255,255,255,.12);
-  color:#aaa;
-  font-size:13px;
-}
-@media(max-width:900px){
-  header{display:block;text-align:center}
-  nav{margin:22px 0}
-  nav a{display:inline-block;margin:8px}
-  .hero,.split,.footer-grid{grid-template-columns:1fr}
-  h1{font-size:54px}
-  .trust,.cards,.form{grid-template-columns:1fr}
-  .hero-card{min-height:auto}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Call Bell to Sell | Premium Real Estate Website Mockup</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#171411;
+      --charcoal:#2b2723;
+      --cream:#f7f1e8;
+      --warm:#efe3d1;
+      --tan:#c59b62;
+      --tan-dark:#9f7441;
+      --white:#ffffff;
+      --muted:#6c6259;
+      --soft:#fbf8f3;
+      --line:rgba(23,20,17,.12);
+      --shadow:0 24px 70px rgba(23,20,17,.18);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--soft);}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:var(--ink);color:#fff;padding:9px 5vw;font-size:13px;display:flex;justify-content:space-between;gap:20px;align-items:center;letter-spacing:.02em}
+    .topbar span{opacity:.88}.topbar strong{color:#e8c38d;font-weight:700}
+    header{position:sticky;top:0;z-index:20;background:rgba(251,248,243,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav{height:78px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:.03em}
+    .mark{width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:Playfair Display,serif;font-size:20px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+    .brand small{display:block;font-size:11px;color:var(--tan-dark);letter-spacing:.2em;margin-top:2px;text-transform:uppercase}
+    nav{display:flex;gap:28px;font-size:14px;font-weight:700;color:var(--charcoal)}
+    .nav-cta{display:flex;gap:12px;align-items:center}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:14px 22px;font-weight:800;font-size:14px;transition:.25s ease;border:1px solid transparent;white-space:nowrap}
+    .btn-primary{background:var(--ink);color:#fff;box-shadow:0 12px 25px rgba(23,20,17,.18)}
+    .btn-primary:hover{transform:translateY(-2px);background:#000}
+    .btn-secondary{border-color:rgba(23,20,17,.18);background:rgba(255,255,255,.6)}
+    .btn-gold{background:linear-gradient(135deg,var(--tan),#e2c08f);color:#211b16}
+    .hero{position:relative;min-height:760px;display:grid;grid-template-columns:1.04fr .96fr;overflow:hidden;background:var(--cream)}
+    .hero-copy{padding:92px 5vw 80px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:3}
+    .eyebrow{display:inline-flex;width:max-content;align-items:center;gap:10px;border:1px solid rgba(159,116,65,.32);border-radius:999px;padding:9px 14px;background:rgba(255,255,255,.58);color:var(--tan-dark);font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tan)}
+    h1{font-family:Playfair Display,serif;font-size:clamp(48px,6vw,92px);line-height:.95;margin:26px 0 22px;letter-spacing:-.05em;color:var(--ink)}
+    .lead{font-size:20px;line-height:1.7;color:#4d453d;max-width:680px;margin:0 0 34px}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+    .trust{display:grid;grid-template-columns:repeat(3,minmax(120px,1fr));gap:14px;max-width:650px}
+    .trust-card{border:1px solid var(--line);background:rgba(255,255,255,.62);padding:18px;border-radius:22px}
+    .trust-card b{display:block;font-size:22px;margin-bottom:4px}.trust-card span{font-size:13px;color:var(--muted);font-weight:700}
+    .hero-visual{position:relative;min-height:640px;background:#221c17}
+    .hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(247,241,232,.88) 0%,rgba(247,241,232,.1) 25%,rgba(0,0,0,.18) 100%)}
+    .hero-img{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85');background-size:cover;background-position:center;filter:saturate(.92) contrast(1.04)}
+    .floating-card{position:absolute;right:5vw;bottom:64px;z-index:4;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.7);border-radius:28px;padding:24px;box-shadow:var(--shadow);width:min(380px,82vw)}
+    .floating-card h3{margin:0 0 8px;font-size:22px}.floating-card p{margin:0 0 18px;color:var(--muted);line-height:1.55}.mini-form{display:grid;gap:10px}.mini-form input,.mini-form select{width:100%;border:1px solid var(--line);border-radius:14px;padding:14px 15px;font:inherit;background:#fff;color:var(--ink)}
+    .section{padding:96px 5vw}.section.alt{background:var(--white)}.section-head{display:flex;justify-content:space-between;gap:32px;align-items:flex-end;margin-bottom:38px}.section-head h2{font-family:Playfair Display,serif;font-size:clamp(36px,4vw,58px);letter-spacing:-.04em;line-height:1;margin:0;max-width:780px}.section-head p{max-width:520px;color:var(--muted);line-height:1.7;margin:0;font-size:16px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:var(--white);border:1px solid var(--line);border-radius:30px;padding:30px;min-height:310px;box-shadow:0 20px 50px rgba(23,20,17,.06);position:relative;overflow:hidden}.card:before{content:"";position:absolute;right:-44px;top:-44px;width:120px;height:120px;border-radius:50%;background:rgba(197,155,98,.16)}.card .num{font-family:Playfair Display,serif;color:var(--tan-dark);font-size:42px;font-weight:700}.card h3{font-size:23px;margin:24px 0 12px}.card p{color:var(--muted);line-height:1.65}.card ul{padding-left:18px;color:#514840;line-height:1.9;font-weight:600}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}.portrait{min-height:620px;border-radius:38px;background-image:linear-gradient(180deg,rgba(0,0,0,.06),rgba(0,0,0,.36)),url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1400&q=85');background-size:cover;background-position:center;box-shadow:var(--shadow);position:relative;overflow:hidden}.portrait .label{position:absolute;left:28px;right:28px;bottom:28px;background:rgba(255,255,255,.9);border-radius:24px;padding:22px}.label b{display:block;font-size:22px}.label span{color:var(--muted);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.12em}
+    .content h2{font-family:Playfair Display,serif;font-size:clamp(36px,4vw,62px);line-height:1;letter-spacing:-.04em;margin:0 0 22px}.content p{color:#50483f;line-height:1.75;font-size:17px}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}.check{background:rgba(247,241,232,.8);border:1px solid var(--line);border-radius:18px;padding:16px 18px;font-weight:800}.check:before{content:"✓";color:var(--tan-dark);margin-right:8px}
+    .dark{background:#191511;color:#fff;position:relative;overflow:hidden}.dark:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 0%,rgba(197,155,98,.24),transparent 34%)}.dark .section-head h2,.dark h3{color:#fff}.dark .section-head p,.dark p{color:rgba(255,255,255,.72)}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;position:relative}.step{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.05);border-radius:26px;padding:26px;min-height:250px}.step b{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--tan);color:#1b1510;margin-bottom:24px}.step h3{font-size:21px}.step p{line-height:1.62}
+    .market{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}.market-image{border-radius:34px;background-image:linear-gradient(90deg,rgba(0,0,0,.05),rgba(0,0,0,.34)),url('https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1600&q=85');background-size:cover;background-position:center;min-height:470px}.quote-box{background:var(--cream);border:1px solid var(--line);border-radius:34px;padding:38px}.quote-box h3{font-family:Playfair Display,serif;font-size:36px;line-height:1.05;margin:0 0 18px}.quote-box p{color:var(--muted);line-height:1.7}.quote-box .areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.pill{border:1px solid rgba(159,116,65,.24);background:#fff;border-radius:999px;padding:10px 14px;font-weight:800;font-size:13px;color:#463d35}
+    .cta{padding:86px 5vw;background:linear-gradient(135deg,#f7f1e8,#fff)}.cta-inner{border-radius:42px;background:#1a1511;color:#fff;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}.cta-inner:after{content:"";position:absolute;right:-100px;top:-100px;width:330px;height:330px;border-radius:50%;background:rgba(197,155,98,.2)}.cta h2{font-family:Playfair Display,serif;font-size:clamp(36px,4vw,62px);line-height:1;margin:0 0 16px}.cta p{color:rgba(255,255,255,.74);font-size:18px;line-height:1.7;max-width:720px}.contact-panel{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:26px;position:relative;z-index:2}.contact-panel input,.contact-panel textarea{width:100%;border:0;border-radius:15px;padding:14px 15px;margin-bottom:10px;font:inherit}.contact-panel textarea{height:92px;resize:none}
+    footer{padding:38px 5vw;background:#0f0d0b;color:rgba(255,255,255,.7);display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-brand{color:#fff;font-weight:800}.mobile-only{display:none}
+    @media(max-width:980px){nav,.nav-cta .btn-secondary{display:none}.mobile-only{display:inline-flex}.hero{grid-template-columns:1fr}.hero-visual{min-height:420px;order:-1}.hero-visual:after{background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(247,241,232,.86))}.floating-card{position:relative;right:auto;bottom:auto;margin:24px 5vw -20px}.section-head,.split,.market,.cta-inner{grid-template-columns:1fr;display:grid}.cards,.process{grid-template-columns:1fr}.trust{grid-template-columns:1fr 1fr}.section{padding:72px 5vw}.checklist{grid-template-columns:1fr}.portrait{min-height:430px}.topbar{display:none}}
+    @media(max-width:560px){.hero-copy{padding-top:48px}.trust{grid-template-columns:1fr}.cta-inner{padding:34px 24px}.section-head h2{font-size:38px}.nav{height:70px}.brand div:not(.mark){font-size:14px}.btn{width:100%}.hero-actions{width:100%}}
+  </style>
 </head>
-
 <body>
-
-<header>
-  <div class="logo">CALL BELL <span>TO SELL</span></div>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#sell">Sellers</a>
-    <a href="#buy">Buyers</a>
-    <a href="#why">Why Jessica</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="btn gold" href="#contact">Get My Home Value</a>
-</header>
-
-<main>
-
-<section class="hero">
-  <div>
-    <div class="eyebrow">Clayton • Johnston County • The Triangle</div>
-    <h1>Sell Smarter.<br>Buy Better.<br><em>Call Bell to Sell.</em></h1>
-    <p>Strategic real estate guidance for homeowners, buyers, and families who want a calm, confident, and highly prepared experience from start to finish.</p>
-    <div class="hero-actions">
-      <a class="btn gold" href="#contact">Get My Home Value</a>
-      <a class="btn outline" href="#sell">See Selling Strategy</a>
+  <div class="topbar"><span>Servicing Clayton, Johnston County, Wake County & the Greater Raleigh Area</span><span><strong>Call/Text:</strong> (609) 221-2869</span></div>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#"><div class="mark">B</div><div>CALL BELL TO SELL<small>Jessica Bell · Fathom Realty</small></div></a>
+      <nav><a href="#sell">Sell</a><a href="#buy">Buy</a><a href="#invest">Investors</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <div class="nav-cta"><a class="btn btn-secondary" href="#contact">Home Value</a><a class="btn btn-primary" href="#contact">Book a Call</a></div>
+      <a class="btn btn-primary mobile-only" href="#contact">Start</a>
     </div>
-  </div>
+  </header>
 
-  <div class="hero-card">
-    <h3>Your home deserves more than a sign in the yard.</h3>
-    <p>Most sellers leave money on the table through weak preparation, poor pricing, or average marketing. Jessica helps you position your home with clarity, confidence, and strategy.</p>
-    <a class="btn gold" href="#contact" style="margin-top:24px;width:max-content;">Start Here</a>
-  </div>
-</section>
-
-<div class="trust">
-  <div><strong>Local Expertise</strong><span>Focused on Clayton, Johnston County, Raleigh, and the Triangle.</span></div>
-  <div><strong>Strategic Pricing</strong><span>Market positioning designed to attract serious buyers.</span></div>
-  <div><strong>Premium Marketing</strong><span>Presentation, exposure, and follow-through that stand out.</span></div>
-  <div><strong>Clear Communication</strong><span>Guidance without confusion, pressure, or guesswork.</span></div>
-</div>
-  
-<section style="
-  height:400px;
-  background:
-    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-  background-size:cover;
-  background-position:center;
-">
-</section>
-<section id="sell">
-  <div class="center">
-    <div class="eyebrow">For Sellers</div>
-    <h2>A smarter way to sell your home.</h2>
-    <p>Selling well is not luck. It is pricing, preparation, positioning, marketing, and negotiation working together.</p>
-  </div>
-
-  <div class="cards">
-    <div class="card"><div class="num">01</div><h3>Pricing Strategy</h3><p>We analyze the market and position your home to compete without leaving money behind.</p></div>
-    <div class="card"><div class="num">02</div><h3>Home Prep</h3><p>Clear recommendations on what to improve, clean, stage, or skip before going live.</p></div>
-    <div class="card"><div class="num">03</div><h3>Marketing</h3><p>Your home is presented with strong copy, clean visuals, and buyer-focused positioning.</p></div>
-    <div class="card"><div class="num">04</div><h3>Negotiation</h3><p>Protecting your price, timeline, terms, and peace of mind through the process.</p></div>
-  </div>
-</section>
-
-<section class="split" id="why">
-  <div>
-    <div class="eyebrow">Why Jessica Bell</div>
-    <h2>Professional, personal, and strategy-first.</h2>
-    <p>Jessica brings a calm, client-focused approach to real estate with a strong eye for presentation, communication, and value. Whether you are selling, buying, relocating, or planning your next move, she helps you make decisions with confidence.</p>
-    <div class="list">
-      <div>✓ Local guidance for Clayton and surrounding markets</div>
-      <div>✓ Seller-first marketing and preparation plan</div>
-      <div>✓ Buyer support from search to closing</div>
-      <div>✓ Backed by Fathom Realty</div>
+  <section class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Clayton & Triangle Real Estate</div>
+      <h1>Sell smarter. Buy better. Call Bell to Sell.</h1>
+      <p class="lead">A more strategic real estate experience for homeowners, buyers, and investors across Clayton, Johnston County, Wake County, and the greater Raleigh area.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#contact">Request My Home Value</a><a class="btn btn-secondary" href="#sell">See The Selling Strategy</a></div>
+      <div class="trust">
+        <div class="trust-card"><b>Local</b><span>Clayton & Triangle market focus</span></div>
+        <div class="trust-card"><b>Strategic</b><span>Pricing, prep & negotiation plan</span></div>
+        <div class="trust-card"><b>Personal</b><span>Responsive, hands-on guidance</span></div>
+      </div>
     </div>
-  </div>
-  <div class="quote">“The goal is simple: help every client feel prepared, protected, and proud of their next move.”</div>
-</section>
-
-<section id="buy">
-  <div class="center">
-    <div class="eyebrow">For Buyers</div>
-    <h2>Buy with clarity, not chaos.</h2>
-    <p>From finding the right home to crafting a smart offer, Jessica helps buyers understand the market, avoid costly mistakes, and move with confidence.</p>
-  </div>
-</section>
-
-<section class="value" id="contact">
-  <div class="eyebrow">Home Value Review</div>
-  <h2>Curious what your home could sell for?</h2>
-  <p>Request a custom home value review and get clear guidance on pricing, preparation, and what your home may command in today’s market.</p>
-
-  <div class="form">
-    <input placeholder="Name">
-    <input placeholder="Email">
-    <input placeholder="Property Address">
-    <a class="btn gold" href="mailto:ksbinvestmentgroup@gmail.com?subject=Home Value Request">Request My Home Value</a>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      <div class="logo">CALL BELL <span>TO SELL</span></div>
-      <p>Helping homeowners, buyers, and families make smarter real estate moves across Clayton, Johnston County, Raleigh, and the Triangle.</p>
+    <div class="hero-visual"><div class="hero-img"></div>
+      <div class="floating-card">
+        <h3>What could your home sell for?</h3>
+        <p>Get a custom value review with pricing range, prep recommendations, and a clear launch plan.</p>
+        <div class="mini-form"><input placeholder="Property address"><input placeholder="Phone or email"><select><option>I'm thinking of selling...</option><option>Immediately</option><option>1–3 months</option><option>3–6 months</option><option>Just curious</option></select><a class="btn btn-gold" href="#contact">Get My Strategy</a></div>
+      </div>
     </div>
-    <div>
-      <h4>Quick Links</h4>
-      <p><a href="#">Home</a><br><a href="#sell">Sellers</a><br><a href="#buy">Buyers</a><br><a href="#contact">Contact</a></p>
-    </div>
-    <div>
-      <h4>Areas</h4>
-      <p>Clayton<br>Johnston County<br>Raleigh<br>The Triangle</p>
-    </div>
-    <div>
-      <h4>Contact</h4>
-      <p>(917) 494-0347<br>ksbinvestmentgroup@gmail.com<br>Fathom Realty</p>
-    </div>
-  </div>
-  <div class="copy">© 2026 Call Bell to Sell. All rights reserved.</div>
-</footer>
+  </section>
 
+  <section id="sell" class="section alt">
+    <div class="section-head"><h2>Your home deserves more than a sign in the yard.</h2><p>The goal is not just to list your home. The goal is to position it correctly, create demand, and negotiate from strength.</p></div>
+    <div class="cards">
+      <div class="card"><div class="num">01</div><h3>Pricing Strategy</h3><p>We review comparable sales, active competition, buyer psychology, and your timing so your home enters the market with confidence.</p><ul><li>Value range analysis</li><li>Net proceeds estimate</li><li>Launch-price recommendation</li></ul></div>
+      <div class="card"><div class="num">02</div><h3>Market-Ready Prep</h3><p>Small changes can create a major difference. You get practical guidance on what to clean, repair, stage, upgrade, or skip.</p><ul><li>Room-by-room prep</li><li>Photo-readiness plan</li><li>ROI-focused suggestions</li></ul></div>
+      <div class="card"><div class="num">03</div><h3>Premium Marketing</h3><p>Your listing gets positioned with stronger photography, polished copy, social-friendly visuals, and a clear story buyers can feel.</p><ul><li>Listing copy</li><li>Digital exposure</li><li>Offer negotiation</li></ul></div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="split">
+      <div class="portrait"><div class="label"><span>Meet Your Realtor</span><b>Jessica Bell</b></div></div>
+      <div class="content"><div class="eyebrow">Fathom Realty NC</div><h2>Local guidance with a strategy-first mindset.</h2><p>Jessica Bell helps clients across Clayton, Johnston County, Wake County, and the greater Raleigh area make smart real estate decisions with a calm, personal, and highly responsive approach.</p><p>Whether you are selling your first home, moving up, relocating, downsizing, or evaluating a potential investment, Jessica brings practical guidance and a polished client experience from the first conversation to the closing table.</p><div class="checklist"><div class="check">Seller preparation guidance</div><div class="check">Buyer offer strategy</div><div class="check">Investor-minded analysis</div><div class="check">Clear communication</div></div></div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="section-head"><h2>A cleaner process from first call to closing.</h2><p>Every client gets a plan. Every step has a purpose. No guessing, no vague updates, no “just wait and see.”</p></div>
+    <div class="process">
+      <div class="step"><b>1</b><h3>Consult</h3><p>Discuss your goals, timeline, property, budget, or desired move.</p></div>
+      <div class="step"><b>2</b><h3>Strategy</h3><p>Build the pricing, prep, search, offer, or investment plan.</p></div>
+      <div class="step"><b>3</b><h3>Execute</h3><p>Launch the listing, tour homes, negotiate terms, and manage details.</p></div>
+      <div class="step"><b>4</b><h3>Close</h3><p>Stay organized through inspection, appraisal, financing, and closing.</p></div>
+    </div>
+  </section>
+
+  <section id="buy" class="section alt">
+    <div class="market">
+      <div class="market-image"></div>
+      <div class="quote-box"><h3>For buyers and investors, the right move starts before the offer.</h3><p>Jessica helps you understand neighborhood fit, resale considerations, pricing pressure, and offer strategy before you commit. For investors, the lens gets sharper: rent potential, renovation scope, exit value, and long-term upside.</p><div class="areas"><span class="pill">Clayton</span><span class="pill">Johnston County</span><span class="pill">Wake County</span><span class="pill">Raleigh Area</span><span class="pill">Cary</span><span class="pill">Garner</span></div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <div class="cta-inner">
+      <div><h2>Thinking about selling? Let’s build your number.</h2><p>Request a custom home value review, prep recommendations, and a strategy to help your home stand out before it ever hits the market.</p><a class="btn btn-gold" href="tel:16092212869">Call Jessica: (609) 221-2869</a></div>
+      <div class="contact-panel"><input placeholder="Name"><input placeholder="Email"><input placeholder="Phone"><textarea placeholder="Tell me about your move"></textarea><a class="btn btn-gold" href="mailto:ksbinvestmentgroup@gmail.com?subject=Call Bell to Sell Website Inquiry">Send Message</a></div>
+    </div>
+  </section>
+
+  <footer><div class="footer-brand">CALL BELL TO SELL · Jessica Bell · Fathom Realty NC</div><div>Equal Housing Opportunity · Designed as a premium homepage mockup</div></footer>
 </body>
 </html>
